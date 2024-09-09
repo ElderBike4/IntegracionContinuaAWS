@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    triggers {
+        githubPush()
+    }
     environment {
         PATH = "${env.PATH}:/home/ubuntu/.local/bin"
     }
