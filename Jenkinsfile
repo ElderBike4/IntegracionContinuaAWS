@@ -39,7 +39,7 @@ pipeline {
         }
         always {
             script {
-                sh 'chmod +x ./docker_commands.sh'
+                sh 'sudo chmod +x ./docker_commands.sh'
                 sh './docker_commands.sh'
             }
         }
