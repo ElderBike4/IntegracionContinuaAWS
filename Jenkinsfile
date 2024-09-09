@@ -51,6 +51,7 @@ pipeline {
                 sh 'chmod +x ./docker_commands.sh'
 
                 sh './docker_commands.sh'
+                
             }
         }
     }
