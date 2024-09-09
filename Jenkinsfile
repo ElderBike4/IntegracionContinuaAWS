@@ -37,7 +37,7 @@ pipeline {
                 expression { currentBuild.result == 'SUCCESS' }
             }
             steps {
-                // Desplegar la aplicación (puede ser un servidor o contenedor)
+                // Desplegar la aplicación
                 echo 'Desplegando la aplicación'
             }
         }
