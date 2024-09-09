@@ -10,8 +10,8 @@ pipeline {
         stage('Build') {
             steps {
                 // Construir y levantar el servidor en Ubuntu
-                sh 'docker build -t operaciones-app .'
-                sh 'docker run -d -p 8081:80 operaciones-app'
+                sh 'sudo docker build -t operaciones-app .'
+                sh 'sudo docker run -d -p 8081:80 operaciones-app'
             }
         }
         stage('Test') {
