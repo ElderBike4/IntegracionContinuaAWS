@@ -14,6 +14,11 @@ pipeline {
                 sh 'docker run -d -p 8081:80 operaciones-app'
             }
         }
+        stage('Install Dependencies') {
+            steps {
+                sh 'pip install selenium'
+            }
+        }
         stage('Test') {
             steps {
                 // Ejecutar las pruebas automatizadas en Ubuntu
