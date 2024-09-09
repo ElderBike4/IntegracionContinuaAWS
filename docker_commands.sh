@@ -7,10 +7,10 @@ if [ -n "$containerId" ]; then
     echo "Contenedor encontrado con ID: $containerId"
 
     # Detener el contenedor
-    sudo docker stop "$containerId"
+    docker stop "$containerId"
 
     # Eliminar el contenedor
-    sudo docker rm "$containerId"
+    docker rm "$containerId"
 else
     echo "No se encontró ningún contenedor para la imagen 'operaciones-app'."
 fi
