@@ -16,7 +16,12 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'pip install selenium'
+                // Crear y activar el entorno virtual, luego instalar Selenium
+                sh '''
+                    python3 -m venv venv  # Crear el entorno virtual
+                    source venv/bin/activate  # Activar el entorno virtual
+                    pip install selenium  # Instalar Selenium
+                '''
             }
         }
         stage('Test') {
@@ -44,7 +49,6 @@ pipeline {
         }
         always {
             script {
-                sh 'sudo chmod +x ./docker_commands.sh'
                 sh './docker_commands.sh'
             }
         }
