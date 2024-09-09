@@ -21,7 +21,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh 'pipenv install selenium'
-                sh 'pipenv run python3 ./tests/tests_operations.py'
+                sh 'pipenv shell'
             }
         }
         stage('Test') {
