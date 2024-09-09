@@ -22,8 +22,8 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'pipenv install selenium'
-                sh 'pipenv shell'
+                sh 'sudo pipenv install selenium'
+                sh 'sudo pipenv shell'
             }
         }
         stage('Test') {
