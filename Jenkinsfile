@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Clonar el repositorio
-                git credentialsId: 'github-token', url: 'https://github.com/ElderBike4/IntegracionContinuaEample.git', branch: 'main'
+                git credentialsId: 'github-token', url: 'https://github.com/ElderBike4/IntegracionContinuaAWS.git', branch: 'main'
             }
         }
         stage('Build') {
