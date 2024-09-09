@@ -16,10 +16,9 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                // Crear y activar el entorno virtual, luego instalar Selenium
                 sh '''
                     python3 -m venv venv  # Crear el entorno virtual
-                    source venv/bin/activate  # Activar el entorno virtual
+                    . venv/bin/activate  # Activar el entorno virtual usando .
                     pip install selenium  # Instalar Selenium
                 '''
             }
