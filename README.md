@@ -199,7 +199,7 @@ Generamos el token classic al menos con los permisos de `repo` es necesario guar
 
 Username ponemos nuestro usuario de GitHub, en passsword el token que acabamos de generar y el id podemos cambiarlo pero para este ejemplo es `github-token`
 
-![SSH](./sources/CredencialesJenkins.png)
+![Adicional](./sources/CredencialesJenkins.png)
 
 ## Webhook
 
@@ -207,17 +207,17 @@ Username ponemos nuestro usuario de GitHub, en passsword el token que acabamos d
 
 ### Configurar Webhook en github con la url de jenkins agregando `/github-webhook/` y configurando el `content-type` en `application/json`
 
-![SSH](./sources/Payload.png)
+![Adicional](./sources/Payload.png)
 
 ### Recargamos la pagina de WebHook y deberia tener una palomita 
 
-![SSH](./sources/Pass.png)
+![Adicional](./sources/Pass.png)
 
 ## Ejecución
 
 ### Agregamos una nueva tarea en jenkins de tipo pipeline y seleccionamos 
 
-![SSH](./sources/Trigger.png)
+![Adicional](./sources/Trigger.png)
 
 ### Seleccionamos Pipeline from SCM y Git, configuramos el repositorio y en credenciales no agregamos ninguna, cambiar rama `master` o `main` dependiendo del repo, por último en Script Path poner `Jenkinsfile`
 
