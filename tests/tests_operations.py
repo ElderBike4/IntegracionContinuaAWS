@@ -3,13 +3,21 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
 
 class TestOperations(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        # Configuración del navegador
-        cls.driver = webdriver.Chrome()
+        # Configuración del navegador para ejecutarse en modo headless
+        chrome_options = Options()
+        chrome_options.add_argument('--headless')  # Ejecutar en modo headless
+        chrome_options.add_argument('--no-sandbox')  # Solucionar problemas en entornos de contenedores
+        chrome_options.add_argument('--disable-dev-shm-usage')  # Usar memoria compartida
+        chrome_options.add_argument('--disable-gpu')  # Desactivar GPU para mejorar compatibilidad en headless
+
+        # Inicializar el navegador
+        cls.driver = webdriver.Chrome(options=chrome_options)
         cls.driver.get("http://localhost:8081")
         cls.wait = WebDriverWait(cls.driver, 10)
 
