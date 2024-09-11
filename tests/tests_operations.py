@@ -11,10 +11,12 @@ class TestOperations(unittest.TestCase):
     def setUpClass(cls):
         # Configuración del navegador para ejecutarse en modo headless
         chrome_options = Options()
-        chrome_options.add_argument('--headless')  # Ejecutar en modo headless
-        chrome_options.add_argument('--no-sandbox')  # Solucionar problemas en entornos de contenedores
-        chrome_options.add_argument('--disable-dev-shm-usage')  # Usar memoria compartida
-        chrome_options.add_argument('--disable-gpu')  # Desactivar GPU para mejorar compatibilidad en headless
+        chrome_options.add_argument("--headless")  # Ejecutar en modo headless
+        chrome_options.add_argument("--no-sandbox")  # Necesario en algunos entornos CI
+        chrome_options.add_argument("--disable-dev-shm-usage")  # Evita problemas de recursos compartidos
+        chrome_options.add_argument("--disable-gpu")  # Opcional, pero puede ayudar en entornos sin GPU
+        chrome_options.add_argument("--remote-debugging-port=9222")  # Para evitar errores de DevTools
+
 
         # Inicializar el navegador
         cls.driver = webdriver.Chrome(options=chrome_options)
