@@ -90,7 +90,6 @@ Darle permisos a jenkins sobre docker
 ```sh
 sudo chmod 666 /var/run/docker.sock
 sudo usermod -aG docker jenkins
-sudo systemctl restart docker
 ```
 
 Reiniciar docker para que los cambios surtan efecto
