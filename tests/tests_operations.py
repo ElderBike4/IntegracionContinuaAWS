@@ -4,8 +4,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.service import Service
 
 class TestOperations(unittest.TestCase):
 
@@ -21,8 +19,7 @@ class TestOperations(unittest.TestCase):
 
 
         # Inicializar el navegador
-        service = Service(ChromeDriverManager().install())
-        cls.driver = webdriver.Chrome(service=service, options=chrome_options)
+        cls.driver = webdriver.Chrome(options=chrome_options)
         cls.driver.get("http://localhost:8081")
         cls.wait = WebDriverWait(cls.driver, 10)
 
