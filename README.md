@@ -47,7 +47,7 @@ Regresamos a la instancia y seleccionamos conectar
 
 Nos conectamos utilizando el ejemplo que nos da, solo intercambiamos la parte de la llave con la ruta donde se encuentra la llave
 
-![SSH](./sources/Llave.png)
+![SSH](./sources/LLave.png)
 
 ## Instalar jenkins en AWS EC2
 
@@ -162,7 +162,7 @@ sudo systemctl restart docker
 ```
 jenkins ALL=(ALL) NOPASSWD: ALL
 ```
-![Jenkins](./sources/sudoJenkins.png)
+![Jenkins](./sources/SudoJenkins.png)
 
 ### Reiniciar jenkins para actualizar los cambios
 ```sh
