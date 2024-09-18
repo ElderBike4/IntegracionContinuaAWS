@@ -139,8 +139,13 @@ sudo systemctl start docker
 ```sh
 sudo apt install python3-pip
 ```
+Si te da errores al instalar Pipenv mediante sudo prueba a instalar con pip
+### instalar pipenv mediante sudo
+```sh
+sudo apt install pipenv
+```
 
-### Instalar pipenv
+### Instalar pipenv mediante pip
 ```sh
 sudo pip install pipenv
 ```
@@ -171,6 +176,12 @@ sudo systemctl restart jenkins
 
 
 ## Instalación de chrome y chromedriver
+
+### Instalar unzip
+
+```sh
+sudo apt install unzip
+```
 
 ### Instalar Chrome
 ```sh
